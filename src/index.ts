@@ -25,6 +25,9 @@ app.use('/api/user', userRoutes);
 app.use('/api/address', addressRoutes);
 app.use('/api/post', postRoutes);
 
+
+ export default app;
+
 // Database synchronization
 const PORT = process.env.PORT || 3000;
 
