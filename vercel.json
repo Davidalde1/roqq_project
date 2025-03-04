@@ -11,14 +11,5 @@
         "src": "/(.*)",
         "dest": "src/index.ts"
       }
-    ],
-    "build": {
-      "env": {
-        "NODE_ENV": "production"
-      }
-    },
-    "installCommand": "npm install",
-    "buildCommand": "npm run build",
-    "devCommand": "npm run dev",
-    "outputDirectory": "dist"
+    ]
   }
