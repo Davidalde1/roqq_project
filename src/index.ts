@@ -20,9 +20,9 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/users', userRoutes);
-app.use('/addresses', addressRoutes);
-app.use('/posts', postRoutes);
+app.use('/api/user', userRoutes);
+app.use('/api/address', addressRoutes);
+app.use('/api/post', postRoutes);
 
 // Database synchronization
 const PORT = process.env.PORT || 3000;
