@@ -1,21 +1,23 @@
 import express from 'express';
 import cors from 'cors';
-import bodyParser from 'body-parser';
+const app = express();
 import dotenv from 'dotenv';
 import sequelize from './config/database';
+
+
+
+dotenv.config();
+
+//use the exported router
 import userRoutes from './routes/userRoutes';
 import addressRoutes from './routes/addressRoutes';
 import postRoutes from './routes/postRoutes';
 
 
-dotenv.config();
 
-
-const app = express();
-
-// Middleware
 app.use(cors());
-app.use(bodyParser.json());
+//use the router
+app.use(express.json());
 
 // Routes
 app.use('/users', userRoutes);
