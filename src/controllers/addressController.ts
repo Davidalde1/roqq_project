@@ -6,7 +6,7 @@ export const getAddressByUserId = async (req: Request, res: Response) => {
   if (address) {
     res.json(address);
   } else {
-    res.status(404).json({ message: 'Address not found' });
+    res.status(404).json('Address not found');
   }
 };
 
