@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import bodyParser from 'body-parser';
 const app = express();
 import dotenv from 'dotenv';
 import sequelize from './config/database';
@@ -17,7 +18,7 @@ import postRoutes from './routes/postRoutes';
 
 app.use(cors());
 //use the router
-app.use(express.json());
+app.use(bodyParser.json());
 
 // Routes
 app.use('/api/user', userRoutes);
